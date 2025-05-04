@@ -45,6 +45,10 @@ The benchmarks are based on integers ranging from a few digits up to 35 digits. 
 
 - Trial Division shows significant slowdowns around 20 digits.
 - QS improves relatively but still lags behind Pollard Rho, which remains highly efficient.
+#### Less than 25 Digits:
+
+![Less than 20 Digits](images/plot_2025-05-04_17-45-26_0.png)
+
 
 #### QS vs Pollard Rho (25 Digits):
 
