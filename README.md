@@ -66,6 +66,10 @@ The benchmarks are based on integers ranging from a few digits up to 35 digits. 
 - Implementing the Self-Initializing Quadratic Sieve (SIQS) is the logical next step to enhance performance.
 
 ## How to Run
+Install dependencies with:
+```bash
+pip install -r requirements.txt
+```
 
 To factor a number using the Quadratic Sieve, execute:
 
