@@ -55,7 +55,7 @@ The benchmarks are based on integers ranging from a few digits up to 35 digits. 
 
 #### QS vs Pollard Rho (35 Digits):
 
-![QS vs Pollard Rho (35 Digits)](images/plot_2025-05-04 _13-35-46_0.png)
+![QS vs Pollard Rho (35 Digits)](images/plot_2025-05-04_13-35-46_0.png)
 
 - Pollard Rho's performance noticeably slows.
 - QS remains slow due to the limitations of using a single polynomial, highlighting the need for an optimized multi-polynomial approach such as SIQS.
