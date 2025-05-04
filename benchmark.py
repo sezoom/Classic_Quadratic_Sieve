@@ -15,10 +15,10 @@ def benchmark_algorithm(function, data):
 
 def evaluate(tests):
     functions = {
-        # 'Trial Division': trial.trial_division,
-        # 'Fermat': fermat.fermat_factor,
-        # 'Pollard Rho': PollarRho.pollard_rho,
-        'Quadratic Sieve':QS.factor
+        'Trial Division': trial.trial_division,
+        'Fermat': fermat.fermat_factor,
+        'Pollard Rho': PollarRho.pollard_rho,
+        'Quadratic Sieve':QS.QS_factor
     }
 
     input_sizes = [len(str(data)) for data in tests]
@@ -29,7 +29,7 @@ def evaluate(tests):
         for data in tests:
             exec_time, _ = benchmark_algorithm(function, data)
             times.append(exec_time)
-            print("Completed:",data)
+            print(function.__name__,",",exec_time,",",data)
         execution_times[name] = times
 
     plt.figure(figsize=(10, 6))
@@ -45,19 +45,7 @@ def evaluate(tests):
     plt.show()
 
 
-# tests = [
-#     7081,  # 4-digit, 97*73
-#     107531,  # 6-digit, 367*293
-#     12086519,  # 8-digit, 8803*1373
-#     7255104209,  # 10-digit, 90833*79873
-#     229893344719,  # 12-digit, 360509*637691
-#     22325207278849,  # 14-digit, 2522227*8851387
-#     2154835075935523,  # 16-digit, 54630089*39444107
-#     249191903933459161,  # 18-digit, 875835781*284518981
-#     50682718434162113833,  # 20-digit, 5164753303*9813192511
-#     6363931628526038586769,  # 22-digit, 74349983581*85594257349
-#     305587913088118865919593,  # 24-digit, 579960509363*526911588211
-# ]
+
 tests=[
 4187,  #4-digit, 79*53
 739591,  #6-digit, 857*863
@@ -69,7 +57,7 @@ tests=[
 205099888707518089,  #18-digit, 241370089*849732001
 62069657128430958631,  #20-digit, 6602693281*9400657351
 4073785567840969783807,  #22-digit, 94171131169*43259388703
-262057039170877491966281,  #24-digit, 827119795493*316830815317
+# 262057039170877491966281,  #24-digit, 827119795493*316830815317
 # 13139946109093875020707721,  #26-digit, 2063150648189*6368873800189
 # 3988357603469632857267605887,  #28-digit, 52028570660707*76657066546741
 # 316223818433693872338471512641,  #30-digit, 324485262464513*974539848225857

@@ -32,7 +32,7 @@ if __name__ == '__main__':
         if QS.is_prime(n):
             print("prime")
             continue
-        res = QS.factor(n)
+        res = QS.QS_factor(n)
         if not res or len(res) != 2:
             print("FAILED")
         else:
